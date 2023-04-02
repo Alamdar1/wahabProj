@@ -34,3 +34,7 @@ e2e/*.map
 .DS_Store/
 
 # End of https://www.toptal.com/developers/gitignore/api/angular
+node_modules/@angular/core/fesm2015/core.mjs.map
+node_modules/@angular/core/fesm2020/core.mjs.map
+node_modules/@angular/core/schematics/ng-generate/standalone-migration/bundle.js.map
+node_modules/esbuild-wasm/esbuild.wasm
