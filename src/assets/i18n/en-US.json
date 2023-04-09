@@ -1,0 +1,24 @@
+{
+  "CORE": {
+    "SI": "Yes",
+    "NO": "No",
+    "OCULTAR": "Ocultar",
+    "MOSTRAR": "Mostrar",
+    "BUSCAR": "Buscar",
+    "FILTRAR": "Aplicar filtros",
+    "ELIMINAR_FILTRO": "Eliminar filtros",
+    "GUARDAR": "Guardar",
+    "CANCELAR": "Cancelar",
+    "CARGANDO": "Cargando",
+    "PREVISUALIZAR": "Previsualizar",
+    "GUARDANDO": "Guardando",
+    "VOLVER": "Volver",
+    "ANADIR": "Añadir",
+    "SUBIR_ARCHIVO": "Subir archivo",
+    "NO_RESULTS": "No hay resultados",
+    "REGISTRAR": "Registrar",
+    "PRESENTAR": "Presentar",
+    "ACCIONES": "Acciones",
+    "QUITAR": "Quitar"
+  }
+}
