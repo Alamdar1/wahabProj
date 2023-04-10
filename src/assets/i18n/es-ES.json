@@ -19,6 +19,29 @@
     "REGISTRAR": "Registrar",
     "PRESENTAR": "Presentar",
     "ACCIONES": "Acciones",
-    "QUITAR": "Quitar"
+    "QUITAR": "Quitar",
+    "HOMBRE": "Hombre",
+    "MUJER": "Mujer",
+    "OTRO": "Otro"
+  },
+  "REGISTRO":{
+    "FORM":{
+      "NOMBRE": "Nombre",
+      "PRIMER_APELLIDO": "Primer apellido",
+      "SEGUNDO_APELLIDO": "Segundo apellido",
+      "SEXO": "Sexo",
+      "PAIS": "Pais",
+      "EMAIL": "Email",
+      "SELECT_OPTION": "Selecciona una opción",
+      "ERROR":{
+        "NOMBRE_REQ": "El nombre es obligatorio",
+        "APELLIDO1_REQ": "El primer apellido es obligatorio",
+        "SEXO_REQ": "El sexo es obligatorio",
+        "PAIS_REQ": "El pais es obligatorio",
+        "EMAIL": "El correo electróncio es obligatorio",
+        "INCORRECT_FORMAT": "Formato incorrecto"
+      }
+    }
+    
   }
 }

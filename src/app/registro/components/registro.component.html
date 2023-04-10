@@ -1,0 +1,77 @@
+<div class="container">
+  <main>
+    <div class="row">
+      <div class="col">
+        <h4 class="mb-3">Datos personales</h4>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col">
+              <label for="nombre" class="form-label">{{'REGISTRO.FORM.NOMBRE' | translate}}</label>
+              <input type="text" class="form-control" id="nombre" maxlength="70" formControlName="nombre" [ngClass]="{error: getControl('nombre')?.errors && getControl('nombre').touched}">
+              <div *ngIf="getControl('nombre')?.errors && getControl('nombre').touched">
+                <small class="text-danger" *ngIf="getControl('nombre')?.errors?.['required']" >{{'REGISTRO.FORM.ERROR.NOMBRE_REQ' | translate}}</small>
+                <small class="text-danger" *ngIf="getControl('nombre')?.errors?.['isNotNumber']" >{{'REGISTRO.FORM.ERROR.INCORRECT_FORMAT' | translate}}</small>
+              </div>
+            </div>
+            <div class="col">
+              <label for="apellido1" class="form-label">{{'REGISTRO.FORM.PRIMER_APELLIDO' | translate}}</label>
+              <input type="text" class="form-control" id="apellido1" maxlength="70" formControlName="apellido1" [ngClass]="{error: getControl('apellido1')?.errors && getControl('apellido1').touched}">
+              <div *ngIf="getControl('apellido1')?.errors && getControl('apellido1').touched">
+                <small class="text-danger" *ngIf="getControl('apellido1')?.errors?.['required']" >{{'REGISTRO.FORM.ERROR.APELLIDO1_REQ' | translate}}</small>
+                <small class="text-danger" *ngIf="getControl('apellido1')?.errors?.['isNotNumber']" >{{'REGISTRO.FORM.ERROR.INCORRECT_FORMAT' | translate}}</small>
+              </div>
+            </div>
+            <div class="col">
+              <label for="apellido2" class="form-label">{{'REGISTRO.FORM.SEGUNDO_APELLIDO' | translate}}</label>
+              <input type="text" class="form-control" id="apellido2" maxlength="70" formControlName="apellido2" [ngClass]="{error: getControl('apellido2')?.errors && getControl('apellido2').touched}">
+              <div *ngIf="getControl('apellido2')?.errors && getControl('apellido2').touched">
+                <small class="text-danger" *ngIf="getControl('apellido2')?.errors?.['isNotNumber']" >{{'REGISTRO.FORM.ERROR.INCORRECT_FORMAT' | translate}}</small>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div>
+                <label for="sexo" class="form-label">{{'REGISTRO.FORM.SEXO' | translate}}</label>
+                <mat-form-field>
+                  <mat-label>{{'REGISTRO.FORM.SELECT_OPTION' | translate}}</mat-label>
+                  <mat-select formControlName="sexo" >
+                    <mat-option *ngFor="let sexoItem of sexoItems"
+                  [value]="sexoItem">{{sexoItem}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <div *ngIf="getControl('sexo')?.errors && getControl('sexo').touched">
+                  <small class="text-danger" *ngIf="getControl('sexo')?.errors?.['required']" >{{'REGISTRO.FORM.ERROR.SEXO_REQ' | translate}}</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <label for="pais" class="form-label">{{'REGISTRO.FORM.PAIS' | translate}}</label>
+                <mat-form-field appearance="fill">
+                  <mat-label>{{'REGISTRO.FORM.SELECT_OPTION' | translate}}</mat-label>
+                  <mat-select formControlName="pais" >
+                    <mat-option *ngFor="let paisItem of paisItems"
+                  [value]="paisItem.idPais">{{paisItem.pais}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <div *ngIf="getControl('pais')?.errors && getControl('pais').touched">
+                  <small class="text-danger" *ngIf="getControl('pais')?.errors?.['required']" >{{'REGISTRO.FORM.ERROR.PAIS_REQ' | translate}}</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <label for="email" class="form-label">{{'REGISTRO.FORM.EMAIL' | translate}}</label>
+              <input type="text" class="form-control" id="email" maxlength="70"  formControlName="email" [ngClass]="{error: getControl('email')?.errors && getControl('email').touched}">
+            </div>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" type="submit" >Siguiente</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  
+</div>

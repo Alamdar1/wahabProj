@@ -2,13 +2,13 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BackendService } from "src/core/base/services/backend-service";
 import { environment } from 'src/environments/environment';
+import { Pais } from "../models/pais-model";
 import { Observable, map } from "rxjs";
-import { UsuarioRegistro } from "../registro/models/usuario-registro.model";
 
 @Injectable({
     providedIn: 'root',
   })
-  export class UsuarioService extends BackendService {
+  export class MasterdataService extends BackendService {
     private readonly urlApi: string;
     private readonly resourceUrl: string;
     
@@ -26,15 +26,14 @@ import { UsuarioRegistro } from "../registro/models/usuario-registro.model";
     };
     }
   
-    addUsuario(user: UsuarioRegistro): Observable<boolean> {
+    getPaises(): Observable<Pais[]> {
         return this.http
-        .post<boolean>(
-          `${this.urlApi}api/usuario/newUsuario`,
-          user,
+        .get<Pais[]>(
+          `${this.urlApi}api/masterData/allPaises`,
           { observe: 'body' }
         )
         .pipe(
-          map((data: boolean) => {
+          map((data: Pais[]) => {
             return data;
           })
         );

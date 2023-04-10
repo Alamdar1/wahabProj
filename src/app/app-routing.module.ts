@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistroComponent } from './registro/registro.component';
+import { RegistroComponent } from './registro/components/registro.component';
 
 const routes: Routes = [
   { path: 'registro', component: RegistroComponent }
