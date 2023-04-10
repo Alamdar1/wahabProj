@@ -21,6 +21,10 @@ export class RegistroComponent {
 
   sexoItems: Array<string>;
   paisItems: Array<Pais>;
+
+  panelOpenState: boolean = false;
+
+  messageError:string;
   
   
   constructor(
@@ -37,7 +41,9 @@ export class RegistroComponent {
       apellido2:null,
       email:null,
       pais:null,
-      sexo:null
+      sexo:null,
+      onlyFansAccount: null,
+      fanslyAccount: null
     };
   }
 
@@ -76,6 +82,8 @@ export class RegistroComponent {
         this.usuarioOauth.pais ? this.usuarioOauth.pais : null,
         [Validators.required],
       ],
+      onlyFansAccount:[],
+      fanslyAccount: []
     })
   }
 
@@ -85,14 +93,14 @@ export class RegistroComponent {
     });
   }
 
-  loadPaisItems(): void{
+   loadPaisItems(): void{
     this.masterDataService.getPaises()
-    .subscribe({
-      next: (v) => {this.paisItems = v},
-      error: (e) => console.log(e),
-      complete: () => console.log("completado")
-    }
-    )
+    .then((r:Array<Pais>)=>{
+      this.paisItems = r;
+    })
+    .catch((e:string)=>{
+      console.log(this.translate.instant("API_ERROR."+e));
+    })
   }
 
   getControl(name: any): AbstractControl | null{
@@ -105,12 +113,11 @@ export class RegistroComponent {
     }else{
       const usuarioRequest = this.registerForm.getRawValue() as UsuarioRegistro;
       this.usuarioService.addUsuario(usuarioRequest)
-      .subscribe({
-        next: (v) => console.log(v),
-        error: (e) => console.log(e),
-        complete: () => console.log("completado")
-        }
-      )
+      .then((r:String)=>{
+      })
+      .catch((e:string)=>{
+        this.messageError = this.translate.instant("API_ERROR."+e);
+      })
       
     }
   }

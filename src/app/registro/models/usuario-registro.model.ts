@@ -7,4 +7,6 @@ export interface UsuarioRegistro {
     sexo?: string;
     pais?: Pais;
     email: string;
+    onlyFansAccount?: string;
+    fanslyAccount?: string;
   }

@@ -27,6 +27,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeEs, 'es');
@@ -57,6 +58,7 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     MatDialogModule,
     MatInputModule,
     MatSelectModule,
+    NgbAccordionModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {

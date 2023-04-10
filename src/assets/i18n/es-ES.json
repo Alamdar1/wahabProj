@@ -22,7 +22,8 @@
     "QUITAR": "Quitar",
     "HOMBRE": "Hombre",
     "MUJER": "Mujer",
-    "OTRO": "Otro"
+    "OTRO": "Otro",
+    "USERNAME": "Nombre de usuario"
   },
   "REGISTRO":{
     "FORM":{
@@ -33,6 +34,8 @@
       "PAIS": "Pais",
       "EMAIL": "Email",
       "SELECT_OPTION": "Selecciona una opción",
+      "OF_TEXT_OF_VERIFICATION": "Para verificar su cuenta de OnlyFans debes suscribirte a la cuenta @xxx y mandar el siguiente mensaje: Verificación cuenta FansDrop @tucuenta",
+      "FL_TEXT_OF_VERIFICATION": "Para verificar su cuenta de Fansly debes suscribirte a la cuenta @xxx y mandar el siguiente mensaje: Verificación cuenta FansDrop @tucuenta",
       "ERROR":{
         "NOMBRE_REQ": "El nombre es obligatorio",
         "APELLIDO1_REQ": "El primer apellido es obligatorio",
@@ -42,6 +45,11 @@
         "INCORRECT_FORMAT": "Formato incorrecto"
       }
     }
-    
+  },
+  "API_ERROR":{
+    "GENERIC":"Se ha producido un error, inténtelo de nuevo",
+    "GET_PAIS_ALL_ERROR_NOT_FOUND": "No se han encontrado países",
+    "ACCOUNT_EXISTS_OF": "El nombre de usuario de la cuenta de OnlyFans ya está en uso, utilice otra o abra un ticket para resolver el problema",
+    "ACCOUNT_EXISTS_FL": "El nombre de usuario de la cuenta de Fansly ya está en uso, utilice otra o abra un ticket para resolver el problema"
   }
 }
