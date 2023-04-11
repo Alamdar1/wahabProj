@@ -1,0 +1,60 @@
+{
+  "CORE": {
+    "SI": "Sí",
+    "NO": "No",
+    "OCULTAR": "Ocultar",
+    "MOSTRAR": "Mostrar",
+    "BUSCAR": "Buscar",
+    "FILTRAR": "Aplicar filtros",
+    "ELIMINAR_FILTRO": "Eliminar filtros",
+    "GUARDAR": "Guardar",
+    "CANCELAR": "Cancelar",
+    "CARGANDO": "Cargando",
+    "PREVISUALIZAR": "Previsualizar",
+    "GUARDANDO": "Guardando",
+    "VOLVER": "Volver",
+    "ANADIR": "Añadir",
+    "SUBIR_ARCHIVO": "Subir archivo",
+    "NO_RESULTS": "No hay resultados",
+    "REGISTRAR": "Registrar",
+    "PRESENTAR": "Presentar",
+    "ACCIONES": "Acciones",
+    "QUITAR": "Quitar",
+    "HOMBRE": "Hombre",
+    "MUJER": "Mujer",
+    "OTRO": "Otro",
+    "USERNAME": "Nombre de usuario"
+  },
+  "REGISTRO":{
+    "FORM":{
+      "NOMBRE": "Nombre",
+      "PRIMER_APELLIDO": "Primer apellido",
+      "SEGUNDO_APELLIDO": "Segundo apellido",
+      "SEXO": "Sexo",
+      "PAIS": "Pais",
+      "EMAIL": "Email",
+      "SELECT_OPTION": "Selecciona una opción",
+      "OF_TEXT_OF_VERIFICATION": "Para verificar su cuenta de OnlyFans debes suscribirte a la cuenta @xxx y mandar el siguiente mensaje: Verificación cuenta FansDrop @tucuenta",
+      "FL_TEXT_OF_VERIFICATION": "Para verificar su cuenta de Fansly debes suscribirte a la cuenta @xxx y mandar el siguiente mensaje: Verificación cuenta FansDrop @tucuenta",
+      "MODAL":{
+        "TITLE":"¡Felicidades!",
+        "BODY": "A partir de ahora inicia tu periodo de prueba de 7 días. ¡En cuanto se verifique tu cuenta podrás disfrutar de FansDrop y hacer crecer tu cuenta como nunca!",
+        "OK": "Empecemos"
+      },
+      "ERROR":{
+        "NOMBRE_REQ": "El nombre es obligatorio",
+        "APELLIDO1_REQ": "El primer apellido es obligatorio",
+        "SEXO_REQ": "El sexo es obligatorio",
+        "PAIS_REQ": "El pais es obligatorio",
+        "EMAIL": "El correo electróncio es obligatorio",
+        "INCORRECT_FORMAT": "Formato incorrecto"
+      }
+    }
+  },
+  "API_ERROR":{
+    "GENERIC":"Se ha producido un error, inténtelo de nuevo",
+    "GET_PAIS_ALL_ERROR_NOT_FOUND": "No se han encontrado países",
+    "ACCOUNT_EXISTS_OF": "El nombre de usuario de la cuenta de OnlyFans ya está en uso, utilice otra o abra un ticket para resolver el problema",
+    "ACCOUNT_EXISTS_FL": "El nombre de usuario de la cuenta de Fansly ya está en uso, utilice otra o abra un ticket para resolver el problema"
+  }
+}
