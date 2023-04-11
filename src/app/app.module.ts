@@ -29,6 +29,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/components/home.component';
+import { PostCardComponent } from './post-card/post-card.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -46,6 +48,8 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     HeaderComponent,
     FooterComponent,
     UsuariosComponent,
+    HomeComponent,
+    PostCardComponent,
   ],
   imports: [
     BrowserModule,

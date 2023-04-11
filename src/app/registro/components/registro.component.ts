@@ -128,6 +128,6 @@ export class RegistroComponent {
   }
 
   closeModal(): void{
-    this.router.navigate(["/"]);
+    this.router.navigate(["/home"]);
   }
 }

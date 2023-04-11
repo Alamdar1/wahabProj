@@ -1,0 +1,9 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mx-auto my-5" *ngFor="let post of postsMock">
+                <app-post-card [postInfo]="post" />
+            </div>
+        </div>
+    </div>
+</main>
