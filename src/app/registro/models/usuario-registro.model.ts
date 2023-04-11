@@ -5,7 +5,7 @@ export interface UsuarioRegistro {
     apellido1?: string;
     apellido2?: string;
     sexo?: string;
-    pais?: Pais;
+    idPais?: number;
     email: string;
     onlyFansAccount?: string;
     fanslyAccount?: string;

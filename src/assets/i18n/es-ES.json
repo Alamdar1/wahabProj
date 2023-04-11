@@ -36,6 +36,11 @@
       "SELECT_OPTION": "Selecciona una opción",
       "OF_TEXT_OF_VERIFICATION": "Para verificar su cuenta de OnlyFans debes suscribirte a la cuenta @xxx y mandar el siguiente mensaje: Verificación cuenta FansDrop @tucuenta",
       "FL_TEXT_OF_VERIFICATION": "Para verificar su cuenta de Fansly debes suscribirte a la cuenta @xxx y mandar el siguiente mensaje: Verificación cuenta FansDrop @tucuenta",
+      "MODAL":{
+        "TITLE":"¡Felicidades!",
+        "BODY": "A partir de ahora inicia tu periodo de prueba de 7 días. ¡En cuanto se verifique tu cuenta podrás disfrutar de FansDrop y hacer crecer tu cuenta como nunca!",
+        "OK": "Empecemos"
+      },
       "ERROR":{
         "NOMBRE_REQ": "El nombre es obligatorio",
         "APELLIDO1_REQ": "El primer apellido es obligatorio",

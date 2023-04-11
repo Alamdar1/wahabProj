@@ -69,7 +69,7 @@
                 <label for="pais" class="form-label">{{'REGISTRO.FORM.PAIS' | translate}}</label>
                 <mat-form-field appearance="fill">
                   <mat-label>{{'REGISTRO.FORM.SELECT_OPTION' | translate}}</mat-label>
-                  <mat-select formControlName="pais">
+                  <mat-select formControlName="idPais">
                     <mat-option *ngFor="let paisItem of paisItems"
                       [value]="paisItem.idPais">{{paisItem.pais}}</mat-option>
                   </mat-select>
@@ -145,4 +145,17 @@
       </div>
     </div>
   </div>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{'REGISTRO.FORM.MODAL.TITLE' | translate}}</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p align="justify">{{'REGISTRO.FORM.MODAL.BODY' | translate}}</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="closeModal()">{{'REGISTRO.FORM.MODAL.OK' | translate}}</button>
+    </div>
+  </ng-template>
+
 </main>

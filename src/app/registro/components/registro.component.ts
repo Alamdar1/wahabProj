@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -7,6 +7,7 @@ import { FormsValidation } from 'src/validators/forms.validator';
 import { MasterdataService } from 'src/app/shared/services/masterdata.service';
 import { Pais } from 'src/app/shared/models/pais-model';
 import { UsuarioService } from 'src/app/usuarios/usuario.service';
+import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-registro',
@@ -14,10 +15,11 @@ import { UsuarioService } from 'src/app/usuarios/usuario.service';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
+  @ViewChild("content") content : any;
   registerForm: FormGroup;
   usuarioRegistro: UsuarioRegistro;
 
-  usuarioOauth: UsuarioRegistro = {nombre:"Sergi", apellido1:"Ahmad", apellido2:null,email:"sak@gmail.com",pais:null,sexo:null}
+  usuarioOauth: UsuarioRegistro = {nombre:"Sergi", apellido1:"Ahmad", apellido2:null,email:"sak@gmail.com",idPais:null,sexo:null}
 
   sexoItems: Array<string>;
   paisItems: Array<Pais>;
@@ -25,6 +27,7 @@ export class RegistroComponent {
   panelOpenState: boolean = false;
 
   messageError:string;
+  openModalSuccess = false;
   
   
   constructor(
@@ -34,13 +37,14 @@ export class RegistroComponent {
     private readonly translate: TranslateService,
     private masterDataService: MasterdataService,
     private usuarioService: UsuarioService,
+    private modalService: NgbModal
   ) {
     this.usuarioRegistro = {
       nombre:null,
       apellido1:null,
       apellido2:null,
       email:null,
-      pais:null,
+      idPais:null,
       sexo:null,
       onlyFansAccount: null,
       fanslyAccount: null
@@ -78,8 +82,8 @@ export class RegistroComponent {
         this.usuarioOauth.sexo ? this.usuarioOauth.sexo : null,
         [Validators.required],
       ],
-      pais: [
-        this.usuarioOauth.pais ? this.usuarioOauth.pais : null,
+      idPais: [
+        this.usuarioOauth.idPais ? this.usuarioOauth.idPais : null,
         [Validators.required],
       ],
       onlyFansAccount:[],
@@ -114,11 +118,16 @@ export class RegistroComponent {
       const usuarioRequest = this.registerForm.getRawValue() as UsuarioRegistro;
       this.usuarioService.addUsuario(usuarioRequest)
       .then((r:String)=>{
+        this.modalService.open(this.content);
       })
       .catch((e:string)=>{
         this.messageError = this.translate.instant("API_ERROR."+e);
       })
       
     }
+  }
+
+  closeModal(): void{
+    this.router.navigate(["/"]);
   }
 }
