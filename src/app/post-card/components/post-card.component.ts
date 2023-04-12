@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class PostCardComponent {
   @Input() postInfo;
-  @Output() idPostEvent = new EventEmitter<string>();
+  @Output() idPostEvent = new EventEmitter<number>();
 
   
   

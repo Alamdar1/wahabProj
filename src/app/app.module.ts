@@ -29,9 +29,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/components/home.component';
-import { PostCardComponent } from './post-card/post-card.component';
+import { HomeComponent } from './onlyfans/components/onlyfans.component';
+import { PostCardComponent } from './post-card/components/post-card.component';
 import { CreacionPostComponent } from './creacion-post/creacion-post.component';
+import { TruncatePipe } from 'src/pipes/truncate.pipe';
 
 registerLocaleData(localeEs, 'es');
 
@@ -52,6 +53,7 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     HomeComponent,
     PostCardComponent,
     CreacionPostComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

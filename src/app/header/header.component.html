@@ -1,33 +1,21 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">FansDrop</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-          <button (click)="creacionPost()" class="btn btn-outline-success" type="submit">{{"CORE.NEW_POST" | translate}}</button>
-      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">FansDrop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/onlyfans">OnlyFans</a>
+        </li>
+      </ul>
+        <button (click)="ajustes()"><img
+            src="https://media.licdn.com/dms/image/C4D03AQHP-2cnyaa6Gw/profile-displayphoto-shrink_400_400/0/1658175680086?e=1686787200&v=beta&t=IQ5LOrNz3BEqjOVoruYG_VT3jFs4No4wqS5YKV7j4Bk"
+            alt="..."></button>
+      <button (click)="creacionPost()" class="btn btn-outline-success" type="submit">{{"CORE.NEW_POST" |
+        translate}}</button>
     </div>
-  </nav>
+  </div>
+</nav>

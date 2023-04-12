@@ -3,7 +3,8 @@ import { Router } from "@angular/router";
 
 @Component({
     selector:"app-header",
-    templateUrl:"./header.component.html"
+    templateUrl:"./header.component.html",
+    styleUrls: ['./header.component.css']
 })
 export class HeaderComponent{
 
@@ -13,6 +14,10 @@ export class HeaderComponent{
 
     creacionPost():void{
         this.router.navigate(["post-cr"]);
+    }
+
+    ajustes():void{
+        
     }
 
 }
