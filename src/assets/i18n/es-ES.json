@@ -23,7 +23,8 @@
     "HOMBRE": "Hombre",
     "MUJER": "Mujer",
     "OTRO": "Otro",
-    "USERNAME": "Nombre de usuario"
+    "USERNAME": "Nombre de usuario",
+    "NEW_POST": "Subir publicación"
   },
   "REGISTRO":{
     "FORM":{
@@ -50,6 +51,9 @@
         "INCORRECT_FORMAT": "Formato incorrecto"
       }
     }
+  },
+  "HOME":{
+    "INICIAR": "Iniciar"
   },
   "API_ERROR":{
     "GENERIC":"Se ha producido un error, inténtelo de nuevo",

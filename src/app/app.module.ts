@@ -31,6 +31,7 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/components/home.component';
 import { PostCardComponent } from './post-card/post-card.component';
+import { CreacionPostComponent } from './creacion-post/creacion-post.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -50,6 +51,7 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     UsuariosComponent,
     HomeComponent,
     PostCardComponent,
+    CreacionPostComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-post-card',
@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PostCardComponent {
   @Input() postInfo;
+  @Output() idPostEvent = new EventEmitter<string>();
+
   
   
   constructor(
@@ -14,6 +16,11 @@ export class PostCardComponent {
   }
 
   ngOnInit(): void {
+    
+  }
+
+  openPost():void{
+    this.idPostEvent.emit(this.postInfo.idPost);
   }
 }
 
