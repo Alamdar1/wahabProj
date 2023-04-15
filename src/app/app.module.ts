@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { UsuarioService } from './usuarios/usuario.service';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { CreacionPostOfComponent } from './creacion-post-of/components/creacion-post-of.component'
+import { CreacionPostFlComponent } from './creacion-post-fl/components/creacion-post-fl.component'
 
 //Externos
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -31,8 +33,10 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './onlyfans/components/onlyfans.component';
 import { PostCardComponent } from './post-card/components/post-card.component';
-import { CreacionPostComponent } from './creacion-post/creacion-post.component';
+import { CreacionPostComponent } from './creacion-post/components/creacion-post.component';
 import { TruncatePipe } from 'src/pipes/truncate.pipe';
+import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 registerLocaleData(localeEs, 'es');
 
@@ -53,7 +57,9 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     HomeComponent,
     PostCardComponent,
     CreacionPostComponent,
-    TruncatePipe
+    TruncatePipe,
+    CreacionPostOfComponent,
+    CreacionPostFlComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +74,8 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     MatSelectModule,
     NgbAccordionModule,
     BrowserAnimationsModule,
+    NgbNavModule,
+    NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

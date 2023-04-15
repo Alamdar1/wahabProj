@@ -1,0 +1,20 @@
+<main>
+    <div class="container">
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+            <li [ngbNavItem]="1">
+                <button ngbNavLink>OnlyFans</button>
+                <ng-template ngbNavContent>
+                    <app-creacion-post-of></app-creacion-post-of>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+                <button ngbNavLink>Fansly</button>
+                <ng-template ngbNavContent>
+                    <app-creacion-post-fl></app-creacion-post-fl>
+                </ng-template>
+            </li>
+        </ul>
+        
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+</main>

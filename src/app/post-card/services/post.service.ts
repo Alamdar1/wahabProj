@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Observable, map } from "rxjs";
 import { Post } from "../model/post.model";
 import { FiltroPostRequest } from "../model/filtro-post-request";
+import { CreacionPost } from "src/app/creacion-post/models/creacion-post.model";
 
 @Injectable({
     providedIn: 'root',
@@ -47,5 +48,49 @@ import { FiltroPostRequest } from "../model/filtro-post-request";
             );
         });
       }
+
+      async addPost(
+        post: CreacionPost,
+        img: File
+        ): Promise<String> {
+          let formData = new FormData;
+          formData.append("archivo", img);
+          formData.append("descripcion", post.descripcion);
+          formData.append("idPerfil", post.idPerfil.toString());
+          return new Promise((resolve, reject) => {
+            this.http
+              .post<ObjectResponse<String>>(
+                `${this.urlApi}${this.resourceUrl}/upload`,formData
+              )
+              .subscribe(
+                (response: ObjectResponse<String>) => {
+                  this.handleResponse(response, resolve, reject);
+                },
+                () => {
+                  reject('Error al crear el usuario');
+                }
+              );
+          });
+        }
+
+        async getPostsByIdPerfil(
+          idPerfil: number
+          ): Promise<Post> {
+            return new Promise((resolve, reject) => {
+              this.http
+                .get<ObjectResponse<Post>>(
+                  `${this.urlApi}${this.resourceUrl}/get-post/${idPerfil}`,
+                  { observe: 'body' }
+                )
+                .subscribe(
+                  (response: ObjectResponse<Post>) => {
+                    this.handleResponse(response, resolve, reject);
+                  },
+                  () => {
+                    reject('Error al crear el usuario');
+                  }
+                );
+            });
+          }
   
   }

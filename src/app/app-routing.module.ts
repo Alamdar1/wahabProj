@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegistroComponent } from './registro/components/registro.component';
 import { HomeComponent } from './onlyfans/components/onlyfans.component';
-import { CreacionPostComponent } from './creacion-post/creacion-post.component';
+import { CreacionPostComponent } from './creacion-post/components/creacion-post.component';
 
 const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
