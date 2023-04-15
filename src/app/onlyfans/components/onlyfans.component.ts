@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FiltroPostRequest } from 'src/app/post-card/model/filtro-post-request';
 import { Post } from 'src/app/post-card/model/post.model';
 import { PostService } from 'src/app/post-card/services/post.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-onlyfans',
@@ -10,28 +11,15 @@ import { PostService } from 'src/app/post-card/services/post.service';
   styleUrls: ['./onlyfans.component.css']
 })
 export class HomeComponent {
-  postsMock = [{title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"2"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"1"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"2"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"3"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"4"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"5"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"1"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"2"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"3"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"4"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"2"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"3"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"4"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"5"},
-  {title:"@sesi",desc:"hola soy el mas guapeton del barrio xupame too", idPost:"2"}];
 
   posts: Array<Post> = [];
+  urlImgApi = environment.urlImgApi;
   request: FiltroPostRequest = {"pais":["España"],"sexo":"Hombre"};
   
   @ViewChild("content") content : any;
   modalTitle: string = "";
   modalBody: string = "";
+  modalImg: string = "";
 
   constructor(
     private modalService: NgbModal,
@@ -57,6 +45,7 @@ export class HomeComponent {
     var post = this.posts.find(p=> p.idPost===idPost);
     this.modalTitle = post.username;
     this.modalBody = post.descripcion;
+    this.modalImg = this.urlImgApi+post.foto;
     this.modalService.open(this.content);
   }
 

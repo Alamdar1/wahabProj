@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-post-card',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class PostCardComponent {
   @Input() postInfo;
   @Output() idPostEvent = new EventEmitter<number>();
-
+  urlImgApi = environment.urlImgApi;
   
   
   constructor(

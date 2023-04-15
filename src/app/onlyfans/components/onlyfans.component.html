@@ -9,7 +9,7 @@
 
     <ng-template #content let-modal>
         <div class="modal-header">
-            <img src="https://media.licdn.com/dms/image/C4D03AQHP-2cnyaa6Gw/profile-displayphoto-shrink_400_400/0/1658175680086?e=1686787200&v=beta&t=IQ5LOrNz3BEqjOVoruYG_VT3jFs4No4wqS5YKV7j4Bk" class="card-img-top" alt="...">
+            <img src="{{modalImg}}" class="card-img-top" alt="...">
           <h4 class="modal-title" id="modal-basic-title">{{modalTitle}}</h4>
           <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
         </div>
