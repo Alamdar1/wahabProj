@@ -9,7 +9,7 @@
     "ELIMINAR_FILTRO": "Eliminar filtros",
     "GUARDAR": "Guardar",
     "CANCELAR": "Cancelar",
-    "CARGANDO": "Cargando",
+    "CARGANDO": "Cargando...",
     "PREVISUALIZAR": "Previsualizar",
     "GUARDANDO": "Guardando",
     "VOLVER": "Volver",
@@ -49,6 +49,16 @@
         "PAIS_REQ": "El pais es obligatorio",
         "EMAIL": "El correo electróncio es obligatorio",
         "INCORRECT_FORMAT": "Formato incorrecto"
+      }
+    }
+  },
+  "CREACION_POST":{
+    "DESCRIPCION": "Descripción",
+    "FORM": {
+      "ERROR":{
+        "DESC_REQ": "La descripción es obligatoria",
+        "FILE_NOT_IMG": "El documento seleccionado no es de tipo imagen. Sube otro archivo",
+        "NOT_IMG_ATT": "Tienes que subir una imagen para crear un Post"
       }
     }
   },
