@@ -62,8 +62,9 @@
       }
     }
   },
-  "HOME":{
-    "INICIAR": "Iniciar"
+  "HOME_OF":{
+    "INICIAR": "Iniciar",
+    "VERIFY": "Verificar"
   },
   "API_ERROR":{
     "GENERIC":"Se ha producido un error, inténtelo de nuevo",

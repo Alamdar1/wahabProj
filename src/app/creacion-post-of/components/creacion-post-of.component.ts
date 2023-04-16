@@ -114,7 +114,7 @@ export class CreacionPostOfComponent {
     if(!this.imagenSeleccionada && !this.postPrecargado.foto){
       this.messageError = this.translate.instant("CREACION_POST.FORM.ERROR.NOT_IMG_ATT");
       return true;
-    }else if(this.imagenSeleccionada.type.indexOf('image') < 0){
+    }else if(this.imagenSeleccionada && this.imagenSeleccionada.type.indexOf('image') < 0){
       this.messageError = this.translate.instant("CREACION_POST.FORM.ERROR.FILE_NOT_IMG");
       return true;
     }else{
