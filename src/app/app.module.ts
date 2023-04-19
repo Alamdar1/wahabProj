@@ -31,12 +31,18 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './onlyfans/components/onlyfans.component';
+import { OnlyfansComponent } from './onlyfans/components/onlyfans.component';
 import { PostCardComponent } from './post-card/components/post-card.component';
 import { CreacionPostComponent } from './creacion-post/components/creacion-post.component';
 import { TruncatePipe } from 'src/pipes/truncate.pipe';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+import { ScrollingModule as ExperimentalScrollingModule } from '@angular/cdk-experimental/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FanslyComponent } from './fansly/components/fansly.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -54,14 +60,16 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     HeaderComponent,
     FooterComponent,
     UsuariosComponent,
-    HomeComponent,
+    OnlyfansComponent,
     PostCardComponent,
     CreacionPostComponent,
     TruncatePipe,
     CreacionPostOfComponent,
-    CreacionPostFlComponent
+    CreacionPostFlComponent,
+    FanslyComponent
   ],
   imports: [
+    InfiniteScrollModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -75,6 +83,9 @@ export const createTranslateLoader = (http: HttpClient): TranslateHttpLoader =>
     NgbAccordionModule,
     BrowserAnimationsModule,
     NgbNavModule,
+    CdkVirtualScrollViewport,
+    ScrollingModule,
+    ExperimentalScrollingModule,
     NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
     TranslateModule.forRoot({
       loader: {

@@ -10,11 +10,13 @@ import Swal from 'sweetalert2';
 import { createWorker, Worker } from 'tesseract.js';
 
 @Component({
-  selector: 'app-onlyfans',
-  templateUrl: './onlyfans.component.html',
-  styleUrls: ['./onlyfans.component.css']
+  selector: 'app-fansly',
+  templateUrl: './fansly.component.html',
+  styleUrls: ['./fansly.component.css']
 })
-export class OnlyfansComponent {
+export class FanslyComponent {
+
+  /* posts: Array<Post> = []; */
   urlImgApi = environment.urlImgApi;
 
   @ViewChild("content") content: any;
@@ -55,7 +57,7 @@ export class OnlyfansComponent {
   addItems(startIndex, endIndex, _method) {
     for (let i = 0; i < this.pageSize; i++) {
       if (((i + 1) % 5) == 0) {
-        var request = { "pais": ["España"], "sexo": "Hombre", "page": this.lastLoadedPage, "size": this.pageSize, "idTipoPerfil": 1 };
+        var request = { "pais": ["España"], "sexo": "Hombre", "page": this.lastLoadedPage, "size": this.pageSize, "idTipoPerfil": 2 };
         this.postService.getPostsOF(request)
           .then((r: Array<Post>) => {
             this.array = this.array.concat(r);
